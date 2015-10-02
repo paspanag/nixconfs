@@ -11,7 +11,7 @@ with pkgs.lib;
         neovim
         #libnotify
         #wmutils-core
-        #sxhkd
+        sxhkd
         light
     ];
 
