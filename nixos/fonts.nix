@@ -22,6 +22,7 @@ with pkgs.lib;
             vistafonts
             unifont
             freefont_ttf
+	    font-awesome-ttf
         ];
     };
 }

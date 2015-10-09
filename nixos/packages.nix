@@ -5,13 +5,9 @@ with pkgs.lib;
 
 {
     environment.systemPackages = with pkgs ; [
-        #emacs
         git
         ranger
         neovim
-        #libnotify
-        #wmutils-core
-        sxhkd
         light
     ];
 

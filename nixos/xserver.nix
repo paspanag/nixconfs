@@ -21,15 +21,41 @@ with pkgs.lib;
         };
 
         windowManager.i3.enable = true;
+        #windowManager.xmonad.enable = true;
         #windowManager.openbox.enable = true;
-
+        #windowManager.awesome.enable = true;
+	
+	# NoWM + wmutils
         #windowManager.session = singleton
         #{
         #	name = "nowm";
         #	start = ''
-        #		source $HOME/.startup
+	#		source $HOME/.startup
+	#		wew | $HOME/bin/focus_watcher.sh &
         #		${pkgs.sxhkd}/bin/sxhkd -c $HOME/.config/sxhkdrc > /dev/null 2>&1 &
         #		waitPID=$!
+        #		'';
+        #
+        #};
+	
+	# 2bwm
+        #windowManager.session = singleton
+        #{
+        #	name = "2bwm";
+        #	start = ''
+	#		source $HOME/.startup
+        #		$HOME/.nix-profile/bin/2bwm > /dev/null 2>&1 &
+        #		waitPID=$!
+        #		'';
+        #
+        #};
+	# i3gaps
+        #windowManager.session = singleton
+        #{
+        #	name = "i3gaps";
+        #	start = ''
+	#		${pkgs.i3gaps}/bin/i3 -c $HOME/.i3/config &
+        # 		waitPID=$!
         #		'';
         #
         #};
