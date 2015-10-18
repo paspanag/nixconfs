@@ -9,15 +9,11 @@ with pkgs.lib;
         ranger
         neovim
         light
+	mksh
     ];
 
     nixpkgs.config = {
         allowBroken = true;
         allowUnfree = true;
-
-        #	chromium = {
-        #		 enablePepperFlash = true;
-        #		 enablePepperPDF = true;
-        #	};
     };
 }

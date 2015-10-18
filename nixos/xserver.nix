@@ -20,7 +20,7 @@ with pkgs.lib;
             enable = true;
         };
 
-        windowManager.i3.enable = true;
+        #windowManager.i3.enable = true;
         #windowManager.xmonad.enable = true;
         #windowManager.openbox.enable = true;
         #windowManager.awesome.enable = true;
@@ -38,17 +38,18 @@ with pkgs.lib;
         #
         #};
 	
-	# 2bwm
-        #windowManager.session = singleton
-        #{
-        #	name = "2bwm";
-        #	start = ''
-	#		source $HOME/.startup
-        #		$HOME/.nix-profile/bin/2bwm > /dev/null 2>&1 &
-        #		waitPID=$!
-        #		'';
-        #
-        #};
+	# cwm
+        windowManager.session = singleton
+        {
+        	name = "cwm";
+        	start = ''
+			source $HOME/.startup
+        		$HOME/.nix-profile/bin/cwm > /dev/null 2>&1 &
+        		waitPID=$!
+        		'';
+        
+        };
+
 	# i3gaps
         #windowManager.session = singleton
         #{

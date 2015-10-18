@@ -34,9 +34,9 @@ with pkgs.lib;
 		home = "/home/peter";
 		description = "Peter Panaguiton";
 		extraGroups = [ "wheel" "networkmanager" ]; # "libvirtd"];
-		shell = "/run/current-system/sw/bin/zsh";
+		#shell = "/run/current-system/sw/bin/zsh";
 	};
 
-  users.defaultUserShell = "/run/current-system/sw/bin/zsh";
+  #users.defaultUserShell = "/run/current-system/sw/bin/zsh";
 
 }
