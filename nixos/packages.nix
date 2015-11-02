@@ -7,9 +7,11 @@ with pkgs.lib;
     environment.systemPackages = with pkgs ; [
         git
         ranger
-        neovim
+	vim
         light
 	mksh
+#	sxhkd
+#	bspwm
     ];
 
     nixpkgs.config = {

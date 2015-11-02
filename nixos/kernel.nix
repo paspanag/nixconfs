@@ -8,7 +8,7 @@ with pkgs.lib;
         efi.canTouchEfiVariables = true;
     };
 
-    boot.kernelPackages = pkgs.linuxPackages_4_1;
+    boot.kernelPackages = pkgs.linuxPackages_4_2;
 
     boot.kernelParams = [
         "elevator=noop"

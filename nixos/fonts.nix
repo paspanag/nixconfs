@@ -17,7 +17,6 @@ with pkgs.lib;
             dejavu_fonts
             terminus_font
             bakoma_ttf
-            bakoma_ttf
             ubuntu_font_family
             vistafonts
             unifont

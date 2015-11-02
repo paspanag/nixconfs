@@ -20,49 +20,43 @@ with pkgs.lib;
             enable = true;
         };
 
-        #windowManager.i3.enable = true;
-        #windowManager.xmonad.enable = true;
-        #windowManager.openbox.enable = true;
-        #windowManager.awesome.enable = true;
-	
-	# NoWM + wmutils
-        #windowManager.session = singleton
-        #{
-        #	name = "nowm";
-        #	start = ''
-	#		source $HOME/.startup
-	#		wew | $HOME/bin/focus_watcher.sh &
-        #		${pkgs.sxhkd}/bin/sxhkd -c $HOME/.config/sxhkdrc > /dev/null 2>&1 &
-        #		waitPID=$!
-        #		'';
-        #
-        #};
-	
-	# cwm
-        windowManager.session = singleton
-        {
-        	name = "cwm";
-        	start = ''
-			source $HOME/.startup
-        		$HOME/.nix-profile/bin/cwm > /dev/null 2>&1 &
-        		waitPID=$!
-        		'';
+	windowManager.i3.enable = true;
+
+        windowManager.session = [
+		# xmonad
+		#{
+		#	name = "xmonad";
+		#	start = ''
+		#		source $HOME/.startup
+		#		${pkgs.xmonad-with-packages}/bin/xmonad > /dev/null 2>&1 &
+		#		waitPID=$!
+		#		'';
+	        #
+		#}
+		# cwm
+		{
+			name = "cwm";
+			start = ''
+				source $HOME/.startup
+				$HOME/.nix-profile/bin/cwm > /dev/null 2>&1 &
+				waitPID=$!
+				'';
+		
+		}
+		#bspwm
+		#{
+		#	name = "bspwm";
+		#	start = ''
+		#		source $HOME/.startup
+		#		${pkgs.sxhkd}/bin/sxhkd -c $HOME/.config/sxhkd/sxhkdrc > /dev/null 2>&1 &
+		#		${pkgs.bspwm}/bin/bspwm -c $HOME/.config/bspwm/bspwmrc > /dev/null 2>&1 &
+		#		waitPID=$!
+		#		'';
+	       	#
+		#}
+	];
         
-        };
-
-	# i3gaps
-        #windowManager.session = singleton
-        #{
-        #	name = "i3gaps";
-        #	start = ''
-	#		${pkgs.i3gaps}/bin/i3 -c $HOME/.i3/config &
-        # 		waitPID=$!
-        #		'';
-        #
-        #};
-        #desktopManager.xterm.enable = false;
-
-        synaptics = {
+	synaptics = {
             enable = true;
             accelFactor = "0.05";
             maxSpeed = "10";
