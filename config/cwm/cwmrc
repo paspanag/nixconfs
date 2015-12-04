@@ -63,7 +63,7 @@ mousebind M-2 unmap
 mousebind M-3 unmap
 mousebind CMS-3 unmap
 
-borderwidth 3 
+borderwidth 1 
 snapdist 3
 
 sticky yes
@@ -93,19 +93,21 @@ color selfont "#F8F8F8"
 color menubg "#272822"
 color menufg "#272822"
 color activeborder "#F8F8F8"
-color inactiveborder "#1e2021"
+color inactiveborder "#111111"
 color urgencyborder "#900000"
 color groupborder "#B8B8B8"
 color ungroupborder "#585858"
 
 autogroup 1 "Termite"
 autogroup 2 "Firefox"
+autogroup 3 "Emacs"
 
 command lock "/home/peter/bin/lock.sh"
 command term termite
 command terminal termite
 command browser firefox
-command turtle "termite -e status.sh --geometry 900x600"
+command editor emacs
+command status "termite -e status.sh --geometry 900x600"
 
 bind XF86AudioRaiseVolume "amixer sset Master 5%+ unmute"
 bind XF86AudioLowerVolume "amixer sset Master 5%- unmute"
