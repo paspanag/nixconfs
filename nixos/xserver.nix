@@ -4,11 +4,10 @@ with pkgs.lib;
 
 {
     services.xserver = {
-        videoDrivers = ["intel" "i965"];
+        videoDrivers = ["intel"];
         autorun = true;
         enable = true;
         layout = "us";
-        driSupport = true;
         resolutions = [{x=1366; y=768;}];
         deviceSection = ''
             Option "RenderAccel" "true"
@@ -20,19 +19,7 @@ with pkgs.lib;
             enable = true;
         };
 
-	windowManager.i3.enable = true;
-
         windowManager.session = [
-		# xmonad
-		#{
-		#	name = "xmonad";
-		#	start = ''
-		#		source $HOME/.startup
-		#		${pkgs.xmonad-with-packages}/bin/xmonad > /dev/null 2>&1 &
-		#		waitPID=$!
-		#		'';
-	        #
-		#}
 		# cwm
 		{
 			name = "cwm";
@@ -43,17 +30,6 @@ with pkgs.lib;
 				'';
 		
 		}
-		#bspwm
-		#{
-		#	name = "bspwm";
-		#	start = ''
-		#		source $HOME/.startup
-		#		${pkgs.sxhkd}/bin/sxhkd -c $HOME/.config/sxhkd/sxhkdrc > /dev/null 2>&1 &
-		#		${pkgs.bspwm}/bin/bspwm -c $HOME/.config/bspwm/bspwmrc > /dev/null 2>&1 &
-		#		waitPID=$!
-		#		'';
-	       	#
-		#}
 	];
         
 	synaptics = {

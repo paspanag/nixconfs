@@ -24,16 +24,14 @@ with pkgs.lib;
 
   time.timeZone = "America/Edmonton";
 
-#  programs.zsh.enable = true;
-
-  system.stateVersion = "15.08";
+  system.stateVersion = "16.03";
 
   users.extraUsers.peter =
 	{
 		isNormalUser = true;
 		home = "/home/peter";
 		description = "Peter Panaguiton";
-		extraGroups = [ "wheel" "networkmanager" ]; # "libvirtd"];
+		extraGroups = [ "wheel" "networkmanager" ];
 		shell = "/run/current-system/sw/bin/mksh";
 	};
 

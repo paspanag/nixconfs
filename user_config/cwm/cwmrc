@@ -1,0 +1,184 @@
+# unbind absolutely all existing key bindings
+bind CM-Return unmap
+bind CM-Delete unmap
+bind M-question unmap
+bind CM-w unmap
+bind M-period unmap
+bind M-Return unmap
+bind M-Down unmap
+bind M-Up unmap
+bind M-slash unmap
+bind C-slash unmap
+bind M-Tab unmap
+bind MS-Tab unmap
+bind CM-n unmap
+bind CM-x unmap
+bind CM-0 unmap
+bind CM-1 unmap
+bind CM-2 unmap
+bind CM-3 unmap
+bind CM-4 unmap
+bind CM-5 unmap
+bind CM-6 unmap
+bind CM-7 unmap
+bind CM-8 unmap
+bind CM-9 unmap
+bind M-Right unmap
+bind M-Left unmap
+bind CM-g unmap
+bind CM-f unmap
+bind CM-m unmap
+bind CM-equal unmap
+bind CMS-equal unmap
+bind CMS-f unmap
+bind CMS-r unmap
+bind CMS-q unmap
+bind M-h unmap
+bind M-j unmap
+bind M-k unmap
+bind M-l unmap
+bind M-H unmap
+bind M-J unmap
+bind M-K unmap
+bind M-L unmap
+bind CM-h unmap
+bind CM-j unmap
+bind CM-k unmap
+bind CM-l unmap
+bind CM-H unmap
+bind CM-J unmap
+bind CM-K unmap
+bind CM-L unmap
+bind C-Left unmap
+bind C-Down unmap
+bind C-Up unmap
+bind C-Right unmap
+bind CS-Left unmap
+bind CS-Down unmap
+bind CS-Up unmap
+bind CS-Right unmap
+mousebind M-1 unmap
+mousebind CM-1 unmap
+mousebind M-2 unmap
+mousebind M-3 unmap
+mousebind CMS-3 unmap
+
+borderwidth 3 
+snapdist 3
+
+sticky yes
+
+ignore "bar"
+
+# clay "#272822"
+# lclay "#26292a"
+# dclay "#1e2021"
+# orchid "#F92672"
+# orlight "#FDBDD4"
+# blue "#66D9EF"
+# blulight "#b2ecf7"
+# green "#A6E22E"
+# orange "#FD971F"
+# ojlight "#FFE792"
+# black "#000000"
+# dark "#0f100d"
+# grey "#676864"
+# light "#F8F8F2"
+# red "#900000"
+
+fontname "Terminus:pixelsize=24:regular"
+
+color font "#676864"
+color selfont "#F8F8F8"
+color menubg "#272822"
+color menufg "#272822"
+color activeborder "#F8F8F8"
+color inactiveborder "#1e2021"
+color urgencyborder "#900000"
+color groupborder "#B8B8B8"
+color ungroupborder "#585858"
+
+autogroup 1 "Termite"
+autogroup 2 "Firefox"
+
+command lock "/home/peter/bin/lock.sh"
+command term termite
+command terminal termite
+command browser firefox
+command turtle "termite -e status.sh --geometry 900x600"
+
+bind XF86AudioRaiseVolume "amixer sset Master 5%+ unmute"
+bind XF86AudioLowerVolume "amixer sset Master 5%- unmute"
+bind XF86AudioMute "amixer sset Master toggle"
+bind XF86MonBrightnessDown "sudo light -U 5"
+bind XF86MonBrightnessUp "sudo light -A 5"
+
+bind 4-c lock
+bind 4-Return terminal
+bind S4-q delete
+bind 4-h bigmoveleft
+bind 4-j bigmovedown
+bind 4-k bigmoveup
+bind 4-l bigmoveright
+bind S4-h bigresizeleft
+bind S4-j bigresizedown
+bind S4-k bigresizeup
+bind S4-l bigresizeright
+bind 4-f fullscreen
+bind 4-u vtile
+bind S4-u htile
+bind 4-x maximize
+#bind 4-y vmaximize
+bind 4-z  vmaximize
+bind S4-z hmaximize
+bind 4-1 group1
+bind 4-2 group2
+bind 4-3 group3
+bind 4-4 group4
+bind 4-5 group5
+bind 4-6 group6
+bind 4-7 group7
+bind 4-8 group8
+bind 4-9 group9
+bind M-1 grouponly1
+bind M-2 grouponly2
+bind M-3 grouponly3
+bind M-4 grouponly4
+bind M-5 grouponly5
+bind M-6 grouponly6
+bind M-7 grouponly7
+bind M-8 grouponly8
+bind M-9 grouponly9
+bind S4-1 movetogroup1
+bind S4-2 movetogroup2
+bind S4-3 movetogroup3
+bind S4-4 movetogroup4
+bind S4-5 movetogroup5
+bind S4-6 movetogroup6
+bind S4-7 movetogroup7
+bind S4-8 movetogroup8
+bind S4-9 movetogroup9
+bind 4-Up raise
+bind 4-Down lower
+bind 4-t raise
+bind S4-t lower
+# bind 4-Tab "randrmove"
+bind SM-Tab rcyclegroup
+bind M-Tab cyclegroup
+bind S4-Tab rcycle
+bind 4-Tab cycle
+bind 4-q hide
+bind S4-r restart
+bind 4-Escape exec_wm
+bind S4-Escape quit
+
+bind 4-s search
+bind 4-period ssh
+bind 4-d exec
+bind S4-d menusearch
+
+mousebind 4-1 window_move
+mousebind 4-3 window_resize
+mousebind 1 menu_unhide
+mousebind 2 menu_group
+mousebind 3 menu_cmd

@@ -2,7 +2,7 @@
 
 {
     networking = {
-        hostName = "petenixos"; # Define your hostname.
+        hostName = "nixie"; # Define your hostname.
         networkmanager.enable = true;
     };
 }
