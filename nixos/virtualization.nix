@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+	virtualisation.xen.enable = true;
+}
