@@ -6,7 +6,6 @@ with pkgs.lib;
 {
     environment.systemPackages = with pkgs ; [
 	vim
-        light
 	mksh
     ];
 

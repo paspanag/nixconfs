@@ -7,6 +7,9 @@
         longitude = "-114";
     };
 
+
+#    services.sshd.enable = true;
+
     #services.acpid = {
     #    enable = true;
     #    lidEventCommands = ''

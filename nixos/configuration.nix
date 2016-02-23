@@ -7,14 +7,14 @@ with pkgs.lib;
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./hardware-configuration-extras.nix
-      ./networking.nix
-      ./kernel.nix
-      ./xserver.nix
-      ./services.nix
-      ./security.nix
-      ./packages.nix
       ./fonts.nix
-      #./virtualization.nix
+      ./kernel.nix
+      ./networking.nix
+      ./packages.nix
+      ./programs.nix
+      ./services.nix
+      ./xserver.nix
+#      ./virtualization.nix
     ];
 
   i18n = {
