@@ -14,7 +14,6 @@ with pkgs.lib;
       ./programs.nix
       ./services.nix
       ./xserver.nix
-#      ./virtualization.nix
     ];
 
   i18n = {
@@ -32,7 +31,7 @@ with pkgs.lib;
 		isNormalUser = true;
 		home = "/home/peter";
 		description = "Peter Panaguiton";
-		extraGroups = [ "wheel" "networkmanager" ];
+		extraGroups = [ "wheel" ];
 		shell = "/run/current-system/sw/bin/mksh";
 	};
 

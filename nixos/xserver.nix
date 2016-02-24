@@ -21,20 +21,6 @@ with pkgs.lib;
 
 	windowManager.i3.enable = true;
 
-#        windowManager.session = [
-		# cwm
-#		{
-#			name = "cwm";
-#			start = ''
-#				source $HOME/.startup
-#				$HOME/.nix-profile/bin/cwm > /dev/null 2>&1 &
-#				waitPID=$!
-#				'';
-#		
-#		}
-#	];
-
-
 	synaptics = {
             enable = true;
             accelFactor = "0.05";
