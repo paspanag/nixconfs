@@ -24,7 +24,7 @@ with pkgs.lib;
 
   time.timeZone = "America/Edmonton";
 
-  system.stateVersion = "16.03";
+  system.stateVersion = "16.09";
 
   users.extraUsers.peter =
 	{

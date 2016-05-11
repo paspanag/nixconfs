@@ -8,28 +8,28 @@
     [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/a37892d5-455f-4bc0-b072-7adadc9c38de";
+    { device = "/dev/disk/by-uuid/c46fe4e1-54d2-4f4b-8594-24900d79464b";
+      fsType = "ext4";
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/50637d2d-be53-4e2b-85ff-42bd2bb9cb18";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/53A7-4B88";
-      fsType = "vfat";
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/f4316559-e81b-42cd-a8ea-157c172c86d4";
+    { device = "/dev/disk/by-uuid/871366d3-3f89-42ed-bf6e-8d5fc7f0a25b";
       fsType = "ext4";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/2ac68f00-4d94-41f8-a8eb-c8107ecb800d"; }
+    [ { device = "/dev/disk/by-uuid/db4221dd-8571-4527-8cac-d5ee00ec4632"; }
     ];
 
-  nix.maxJobs = 4;
+  nix.maxJobs = lib.mkDefault 4;
 }
