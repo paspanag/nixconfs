@@ -8,8 +8,8 @@ with pkgs.lib;
 	vim
 	mksh
 	termite
-	i3status
-	chromium
+	i3lock
+	cwm
     ];
 
     nixpkgs.config = {

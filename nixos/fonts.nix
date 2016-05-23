@@ -13,11 +13,9 @@ with pkgs.lib;
         fonts = with pkgs ; [
             terminus_font
             ubuntu_font_family
-	    font-awesome-ttf
 	    fira
 	    fira-code
 	    fira-mono
-	    gohufont
         ];
     };
 }
