@@ -1,16 +1,13 @@
 { pkgs, ... }:
 
-with pkgs.lib;
-
 {
-    boot.loader.grub.enable = true;
-    boot.loader.grub.version = 2;
-    boot.loader.grub.device = "/dev/sda";
+	boot.loader.systemd-boot.enable = true;
+	boot.loader.efi.canTouchEfiVariables = true;
 
-    boot.kernelPackages = pkgs.linuxPackages_4_5;
+	boot.kernelPackages = pkgs.linuxPackages_4_8;
 
-    boot.kernelParams = [
-        "elevator=noop"
-        "ipv6.disable=1"
-    ];
+	boot.kernelParams = [
+		"elevator=noop"
+		"ipv6.disable=1"
+	];
 }

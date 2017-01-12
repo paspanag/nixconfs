@@ -1,0 +1,9 @@
+
+{ ... }:
+
+{
+	programs = {
+		light.enable = true;
+		bash.promptInit = ''PS1="\[\e]0;\w\a\]\n\[\e[3'';
+	};
+}
